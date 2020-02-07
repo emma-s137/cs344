@@ -1,0 +1,7 @@
+
+    i. Is the GPS problem solver implemented as a class or as a function?
+    GPS is a function.
+    ii. The solver requires initial states, goal states and operators. Of what type are these objects?
+    These objects are lists.
+    3. Is the mechanism recursive? If so, how does it implement its recursion?
+    Yes, the gps function calls achieve_all(), which calls
