@@ -1,4 +1,5 @@
 from gps import gps
+import logging
 
 problem = {
     "start": ["at door", "on floor", "has ball", "hungry", "chair at door"],
@@ -43,6 +44,7 @@ problem = {
     ]
 }
 
+
 def main():
     start = problem['start']
     finish = problem['finish']
@@ -50,5 +52,22 @@ def main():
     for action in gps(start, finish, ops):
         print(action)
 
+
 if __name__ == '__main__':
-    main()
+
+    # This turns on detailed logging for the GPS "thought" process.
+    logging.basicConfig(level=logging.DEBUG)
+
+    # Use GPS to solve the problem formulated above.
+    actionSequence = gps(
+        problem['initial'],
+        problem['goal'],
+        problem['actions']
+    )
+
+    # Print the solution, if there is one.
+    if actionSequence is not None:
+        for action in actionSequence:
+            print(action)
+    else:
+        print('plan failure...')

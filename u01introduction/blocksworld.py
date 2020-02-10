@@ -2,12 +2,13 @@
     This module implements the simple blocks world using PAIP GPS.
 """
 from gps import gps
+import logging
 
 # Formulate the problem states and actions.
 problem = {
 
-    'initial': ['space on a', 'a on b', 'b on c', 'c on table', 'space on table'],
-    'goal': ['space on c', 'c on b', 'b on a', 'a on table', 'space on table'],
+    'initial': ['space on c', 'c on table', 'space on a', 'a on table', 'space on b', 'b on table'],
+    'goal': ['c on table', 'b on c', 'a on b', 'space on a' ],
 
     'actions': [
         {
@@ -291,6 +292,9 @@ problem = {
 
 
 if __name__ == '__main__':
+
+    # This turns on detailed logging for the GPS "thought" process.
+    logging.basicConfig(level=logging.DEBUG)
 
     # Use GPS to solve the problem formulated above.
     actionSequence = gps(
