@@ -1,5 +1,5 @@
 """
-    Emma Schroer CS344
+    CS344
     This module implements the simple cat jumping into lake problem using PAIP GPS.
     A cat is trying to jump into the middle of the lake, but it must first be picked up
     on one of the ports.
