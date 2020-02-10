@@ -1,0 +1,39 @@
+
+    i. Is the GPS problem solver implemented as a class or as a function?
+    GPS is a function.
+    ii. The solver requires initial states, goal states and operators. Of what type are these objects?
+    These objects are lists.
+    iii. Is the mechanism recursive? If so, how does it implement its recursion?
+    Yes, the gps function calls achieve_all(), which calls achieve(), which calls apply_operator(),
+    which calls achieve_all(), implementing the recursion.
+
+
+    i. What famous puzzle does this code model and what are the rules of that puzzle? Does the code faithfully implement the puzzle?
+    This code models the monkey and banana problem and where a monkey has access to to a chair and a stick. There are bananas on the
+    ceiling high enough that the monkey needs to be standing on the chair and waving the stick to knock the bananas down.
+    No the code is not exactly the same problem. In this problem there is no stick, and a ball that the monkey needs to be not holding.
+
+    ii.What components does each domain action specify?
+    The components specify changes to a state. Such as dropping the ball changing the monkeys state
+    from holding the ball to empty handed.
+
+    iii.How does the GPS mechanism solve the problem? Be prepared to specify this in detail.
+    You can use the logging feature to print a trace of the mechanism’s deliberations.
+
+    The GPS mechanism solves the problem by trying to arrive at the desired goal state by fulfilling the preconditions.
+    In this example, the desired state is not hungry, which means the action eat banana is required. However, a precondition
+    is that first you need to get the bananas, and to get the bananas they need to be grasped, and for this a precondition is
+    that the hands need to be empty... And the GPS continues to recursively go back through the actions needed until we arrive
+    at an action where all the preconditions are  met, and then we can go back through the recursive loop completing the actions
+    and allowing the monkey to eat the banana.
+
+    Is this code artificially intelligent? If so, which definition (or definitions) of AI from the text does it satisfy?
+    Would a monkey who/that solves the problem in the real world be displaying intelligence?
+
+    I think this code would be classified as being artificially intelligent. I think the definition of AI it best matches
+    with is thinking rationally, as it needs to pick a part every step along the way in order to arrive at the desired state.
+    This is a more rational way of thinking then a human, as the steps of grabbing a banana,
+    letting go of something else are intuitive and not something that someone necessarily has to think about doing.
+
+    I think that if a monkey in the real world solves this problem it would be displaying intelligence, as it would have
+    to use problem solving skills in order to use the chair to get the bananas.

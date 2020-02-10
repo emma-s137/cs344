@@ -2,14 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="23ade992-7e41-498c-aa2d-5c990a4ff223" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/u01introduction/gps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/u01introduction/lab_2.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/u01introduction/lab_3.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab01/lab_1.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab01/lab_2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab01/lab_3.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tools/paip/monkeys.py" beforeDir="false" afterPath="$PROJECT_DIR$/tools/paip/monkeys.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/u01introduction/blocksworld.py" beforeDir="false" afterPath="$PROJECT_DIR$/u01introduction/blocksworld.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/u01introduction/lab_1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/u01introduction/lab_1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/u01introduction/monkeys.py" beforeDir="false" afterPath="$PROJECT_DIR$/u01introduction/monkeys.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,11 +33,12 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/u01introduction" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/lab01" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/lab01" />
       <recent name="$PROJECT_DIR$/u01introduction" />
       <recent name="$PROJECT_DIR$" />
     </key>
@@ -190,7 +187,7 @@
       <workItem from="1581093303884" duration="340000" />
       <workItem from="1581094114309" duration="2278000" />
       <workItem from="1581097874607" duration="57000" />
-      <workItem from="1581097932921" duration="7426000" />
+      <workItem from="1581097932921" duration="7578000" />
     </task>
     <task id="LOCAL-00001" summary="Update source code 2.0">
       <created>1581095660668</created>
@@ -213,7 +210,14 @@
       <option name="project" value="LOCAL" />
       <updated>1581098189284</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Update answers and lab part 2 and 3">
+      <created>1581305923508</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1581305923508</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -222,7 +226,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Update source code 2.0" />
     <MESSAGE value="Update answers" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update answers" />
+    <MESSAGE value="Update answers and lab part 2 and 3" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update answers and lab part 2 and 3" />
   </component>
   <component name="WindowStateProjectService">
     <state x="449" y="26" key="#blocksworld" timestamp="1581170017725">
@@ -250,10 +255,11 @@
       <screen x="0" y="23" width="1440" height="805" />
     </state>
     <state x="449" y="26" key="#monkeys_(2)/0.23.1440.805@0.23.1440.805" timestamp="1581098522492" />
-    <state x="370" y="68" width="770" height="796" key="CommitChangelistDialog2" timestamp="1581098188912">
-      <screen x="0" y="23" width="1440" height="805" />
+    <state x="370" y="32" width="770" height="796" key="CommitChangelistDialog2" timestamp="1581305923224">
+      <screen x="0" y="23" width="1440" height="810" />
     </state>
     <state x="370" y="68" key="CommitChangelistDialog2/0.23.1440.805@0.23.1440.805" timestamp="1581098188912" />
+    <state x="370" y="32" key="CommitChangelistDialog2/0.23.1440.810@0.23.1440.810" timestamp="1581305923224" />
     <state x="2011" y="50" width="770" height="796" key="CommitChangelistDialog2/0.25.1600.875/1600.0.1600.900@1600.0.1600.900" timestamp="1581095669640" />
     <state x="2183" y="208" width="426" height="479" key="FileChooserDialogImpl" timestamp="1581093641727">
       <screen x="1600" y="0" width="1600" height="900" />
@@ -292,10 +298,11 @@
     </state>
     <state x="274" y="99" key="SettingsEditor/0.23.1440.805@0.23.1440.805" timestamp="1581098865945" />
     <state x="1904" y="85" key="SettingsEditor/0.25.1600.875/1600.0.1600.900@1600.0.1600.900" timestamp="1581095176688" />
-    <state x="356" y="189" width="802" height="523" key="Vcs.Push.Dialog.v2" timestamp="1581098204682">
-      <screen x="0" y="23" width="1440" height="805" />
+    <state x="356" y="190" width="802" height="523" key="Vcs.Push.Dialog.v2" timestamp="1581305938677">
+      <screen x="0" y="23" width="1440" height="810" />
     </state>
     <state x="356" y="189" key="Vcs.Push.Dialog.v2/0.23.1440.805@0.23.1440.805" timestamp="1581098204682" />
+    <state x="356" y="190" key="Vcs.Push.Dialog.v2/0.23.1440.810@0.23.1440.810" timestamp="1581305938677" />
     <state x="1995" y="186" width="802" height="523" key="Vcs.Push.Dialog.v2/0.25.1600.875/1600.0.1600.900@1600.0.1600.900" timestamp="1581095711938" />
     <state x="2205" y="370" width="382" height="155" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1581095688319">
       <screen x="1600" y="0" width="1600" height="900" />
