@@ -1,0 +1,83 @@
+Exercise 3.1
+
+Which of the local search algorithms solves the problem? How well does each algorithm do?
+Which algorithm works more quickly?
+Does the starting value for x make any difference? Why or why not?
+What affect does changing the delta step value make on each algorithm? Why?
+What is the purpose of the exp_schedule() method in the simulated annealing function call?
+
+1. The hill climbing and the simulated annealing algorithms both successfully solve this problem.
+They both consistently achieve the correct answer as their are no local maxima to stop the finding of the correct answer.
+
+2. The hill climbing algorithm is quicker, as it stops as soon as none of the it's immediate moves are an improvement.
+Whereas the simulated annealing keeps trying some less ideal solutions in order to ensure it is not stuck by a local maxima.
+
+3. In this problem, the starting location does not matter for finding the solution, as the hill climbing solution could
+be stuck at a local maxima depending on the starting locating. However, this graph only has only one maxima, so this was
+not an issue. This also was not important for the simulated annealing for the same reason, but also even if there were local maximum
+the simulated annealing has the ability to probabilistically pick less ideal solutions, and move to find the global maximum.
+
+4. Changing the delta could potentially make finding the correct value impossible, as the correct value is 15. However, if the step size
+by which the algorithm is changed from 1 to 2, and the starting value is even then the steps are not small enough for the correct value to be found.
+The delta changes the size of the step that an algorithm will be able to take in either direction from its current value.
+
+5. The exp_schedule() method is given parameters for initial temperature and a value for the probability that a less then ideal
+solution will be picked, as well as a limit. This will determine when a step will be taken that seems to get further away from the
+ideal solution. This allows for the ability to potentially escape local maxima.
+
+
+Exercise 3.2
+
+How do each of the algorithms do on this problem space? Why?
+Does the starting value make any difference here?
+Does modifying the step size (i.e., delta) affect the operation of the two algorithms? Why or why not?
+What are the maximum and minimum possible values here, and how do the two algorithms score with respect to them?
+
+1. The simulated annealing solution tends to find better answers then the hill climbing method. Because the hill climbing
+method get stuck in local maximas.
+
+2. The starting value makes a difference since the hill climbing method will never escape a local maxima, so a
+higher starting value gives a better solution. This is also true for the simulated annealing method, as if the starting value is
+low the ability to pick worse solutions will allow this method to skip a couple local maximas, but once the "temperature is low"
+the simulated annealing also tends to get stuck at local maximas.
+
+3. The changing of the delta to a larger value often allows the hill climbing solution to bypass certain valleys, and find a better maximum.
+This also improves the results of the simulated annealing solution, as the global maximum is infinite, so the larger step steps allows
+an overall better maximum to be found.
+
+4.The minimum possible value is 0 and the maximum is infinite (on the pictured graph of the function it's 30).
+With respect to those numbers, the simulated annealing solution achieves a better solution, while the hill climbing
+solution is often stuck at a lower local maxima.
+
+Exercise 3.3
+
+How does each algorithm do with these restarts? Why?
+What are the average values of the runs for each of the algorithms?
+If one of the algorithms does better, explain why. If not, explain why not.
+
+1. For the sine function the hill climbing solution and simulated annealing methods both show variation with the different
+starting locations. However, on average the simulated annealing still gives better solutions then the hill climbing solution.
+
+2.
+Simulated Annealing Sine average: 25.33
+Hill Climbing Abs average: 17.33
+
+3. The Simulated Annealing does better because it has a greater initial ability to escape local maxima when the
+"temperature is high". While, the hill climbing solution is restricted by its initial position, and can usually only find
+a local maxima. Because of this even with multiple runs we still see better results with simulated annealing.
+
+Exercise 3.4
+For which algorithm does beam search make the most sense?
+How many solutions could you maintain with reasonable space and time constraints?
+How would you modify the code to implement beam search? How is it different from random restarts, if at all?
+
+1. Beam search would help with the the simulated annealing more then the hill climbing as it behaves very similiarly to hill climbing
+just with multiple processes running at once and greater communication. It would help the simulated annealing as it would
+help centralize the search on a better location potentially more quickly, as it would have numerous starts.
+
+2. Based on how much space one solution takes to store and the memory size. You could store the number of solutions equal
+to the memory divided by the space for one solution. And for time constraints you would most likely not want more then 100
+solutions unless you ran the program in parallel.
+
+3. The code would be modified to pass the initial state with the best value back to the next iteration of the search. Where
+they would use that initial state as their start value. This allows the search to center in on locations with more potential.
