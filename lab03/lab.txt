@@ -1,0 +1,90 @@
+Exercise 3.1
+
+1. Which algorithms work (in a timely manner) and which don’t? Explain your results in terms of the capabilities (and implementations) of the algorithms and nature of the problems.
+
+            DFS        |       AC-3       |   Backtrack   |    Min-conflicts
+solved      timely     |     Timely       |     Timely    |      Timely
+easy        DNF        |     Timely       |     Slower    |      DNF
+harder      DNF        |     Failed       |      DNF      |      Failed
+hardest     DNF        |     Failed       |      DNF      |      Failed
+
+*DNF = Did not Finish - took too long, so the program was stopped
+
+The DFS behaves by reaching a finished node (a filled sudoku).
+However, the algorithm has no behavior to try and pick numbers that will fit the constraints, so the algorithm
+will eventually fail.
+
+The AC-3 Failed quickly for the two harder puzzles because their were too many constraints and no way to backtrack. While, this
+method was more effective for the easy problem where guessing was not needed to solve the problem.
+
+The backtracking algorithm is able to solve the easy problem in a slow manner as it is able to go back and try to find solutions
+that fit constraints. It is able to go back after hitting a point where the constraints are not satisfied. As a result, it will
+be able to solve the puzzles it may just take a very long time.
+
+The property of the min-conflicts algorithm is that it assigns values to all the location in the puzzle, and then try to solve
+the puzzle by trying to minimize the number of conflicts using hill climbing to switch two of the values. This
+algorithm then does not have backtracking which caused the failure to the two harder problems.
+
+
+2. What effect does configuring the settings for backtracking have on the results? Try the following:
+
+a. Set the variable/value ordering (i.e., the select_unassigned_variable parameter) to first-unassigned-variable (the default) or minimum-remaining-values (i.e., mrv).
+    Assigning mrv to the select_unassigned_variable parameter makes the next value be chosen to be a move that will limit the amount
+    of future legal move. The idea behind this is to quickly narrow the search field, and run into constraints, and not continue searching
+    down fruitless streams. The problem was still not solved in a timely manner for any of the puzzle difficulties.
+
+b. Set the inference (i.e., the inference parameter) to forward-checking (i.e., forward_checking).
+    This on its own showed significant speed-up. This parameter allows for some forward checks, and stops
+    the program from going down a path that will unevitably result in failure. Allowing for some level of "pruning".
+
+Which, if any, of these settings should work best for sudoku? What combination of settings actually works the best?
+
+For the sudoku problem both of these should be helpful in speeding up backtracking. As it will allow for quicker
+elimination of non-viable paths. The greatest speed-up was seen when enabling both of these parameters. In addition,
+using forward-checking on it's own also saw significant speed-up, but mrv did not.
+
+Exercise 3.2
+
+1. How large can n get for each of the algorithms? Why?
+
+AC3 does not work for the queens problem because there is more than one possible solution, so the domains of each space
+could have more then one value.
+The backtracking problem works in a timely manner for an n of about 24. Backtracking is a type of traditional search, which
+is why the addition of more queens causes it to significantly slow down.
+The min-conflict algorithm works in a timely manner around n = 5000. It can handle more n's because it is a local search algorithm.
+
+2. What backtracking settings work the best? Why?
+
+The combination of both the mrv and forward checking works best. Although the mrv which quickly eliminated non-viable paths seemed to be
+more helpful at reducing the scope of the traditional search. Although, the forward checking also showed significant speed-up.
+The settings of both of them together is most effective.
+
+3. How many steps does Min-Conflicts require to do its work? Why?
+
+Min-Conflicts varies based on how many initial conflicts there were set up. I saw in about 10 trials runs a variation from 8 to 177.
+Although, the average seems to be closer to about 50. Not very steps are needed because their are multiple potential solutions to the
+problem that can be found.
+
+Exercise 3.3
+
+1. Compare and contrast the specifications for CSP (i.e., csp.CSP) and traditional problems (i.e., search.Problem).
+Be sure to consider the nature of states, domains, actions, results and goal tests.
+
+Both of these problems will have an initial and goal state, as well a goal test. Both of these problems
+are also able to move between states traditional search uses specified actions, while CSP moves between states
+based on the constraints given.
+
+In CSP, each problem has a set of variables, each of these variables has a domain and then there are constraints. CSP
+
+A traditional search problem will a data structure that supports a goal test (state), actions (or neighboring nodes) and
+potentially a heuristic.
+
+
+2. Compare and contrast the nature of the heuristics deployed in traditional and constraint-based problem solving.
+
+Heuristics are used in both of the problem solving methods to make the algorithm more efficient.
+In traditional problem solving the heuristic is determined based on the state of the problem, and a better value would
+mean that one is approaching the goal state. The heuristic would also be problem specific, as it would evaluate a specific
+board or scenario.
+In constraint-based problem solving a general purpose heuristic is used to eliminate large areas of search space where the
+given variables or values violate the constraints.
