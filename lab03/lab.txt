@@ -55,8 +55,8 @@ The min-conflict algorithm works in a timely manner around n = 5000. It can hand
 
 2. What backtracking settings work the best? Why?
 
-The combination of both the mrv and forward checking works best. Although the mrv which quickly eliminated non-viable paths seemed to be
-more helpful at reducing the scope of the traditional search. Although, the forward checking also showed significant speed-up.
+The combination of both the mrv and forward checking works best. Although the mrv which picked an option that is more constrained in order to encounter failure quickly before going to deep into the tree was more effective then the forward checking.
+Although, the forward checking also showed significant speed-up.
 The settings of both of them together is most effective.
 
 3. How many steps does Min-Conflicts require to do its work? Why?
