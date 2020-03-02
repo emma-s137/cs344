@@ -1,0 +1,43 @@
+Exercise 4.3
+Use probability theory and Bayes’ rule to compute the following (manually, showing all steps):
+
+Drug testing1 — Given that a drug test is 99% sensitive (i.e., drug users get positive results 99% of the time) and 98% specific (i.e., non drug users get negative results 98% of the time) and also that 8.9% of Americans are drug users of some sort, compute the following probabilities:
+
+1. P(User) = <0.089, 0.911>
+2. P(test | user) = 0.99
+3. P(¬test | user) = 0.01
+4. P(test | ¬user) = 0.02
+5. P(User | test) = <0.83, 0.17>
+
+User  <0.99, 0.01> * 0.089 = <0.0881, .00089>
+Not user = <0.02, 0.98> * 0.911 = <0.0182, 0.893>
+
+                    user        -user
+       test        0.0881       0.0182     =.106
+       -test       0.00089      0.893
+
+p (user | test) = p( test | user) * p(user) / p(test)
+                = 0.99 * 0.089 / 0.106
+                =0.83
+
+
+Breast cancer2 — 1% of women at age forty who participate in routine screening have breast cancer. 80% of women with breast cancer will get positive mammographies. 9.6% of women without breast cancer will also get positive mammographies.
+
+A woman in this age group is found to have a positive mammography in a routine screening.
+What are the chances that she has/doesn't have cancer?
+
+Cancer 0.01 * <0.2, 0.8> = <0.002, 0.008>
+No cancer 0.99 * <.904, 0.096> = <0.895, 0.95>
+
+
+            cancer      -cancer
++ test      0.008        0.095      =.103
+- test      0.002        0.895
+
+Given a positive test what are the chances she has cancer
+p (cancer | + test) = p( + test | cancer) * p (cancer) / p (+ test)
+    = 0.8 * 0.01 / 0.103 = 0.0777
+
+There is a 0.078 chance she does have cancer, and a .92 chance she doesn't have cancer.
+P(cancer| + test) = <0.078, 0.922>
+
