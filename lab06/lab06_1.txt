@@ -1,0 +1,22 @@
+
+Using data from AIMA, Section 18.3
+6.1
+
+Gain (H) = Entropy(D) - Remainder (H)
+
+Entropy (Domain) = 1.0
+Remainder (Hungry?) = 7/12 * Entropy(Y) + 5/12 * Entropy(N)
+Entropy (Y) = -((5/7) log (5/7) + (2/7) * log(2/7)) = 0.86312
+Entropy (N) = -((1/5) log (1/5) + (4/5) * log(4/5)) = 0.72192
+
+Remainder (Hungry?) = 7/12 * 0.86312 + 5/12 * 0.72192 = 0.804
+
+
+Gain (H) = 1.0 - 0.804
+Gain (Hungry?) = 0.196
+
+The information gain from this question is 0.196, and it is a better question then Type?,
+which had an information gain of 0, but Patrons is a better question with an information gain of
+0.54.
+
+
