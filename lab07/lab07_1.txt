@@ -1,0 +1,17 @@
+Exercise 1
+a.
+
+cities['San_50'] =  (cities['City name']).apply(lambda name: name.startswith('San')) & (cities ['Area square miles'] > 50)
+cities
+
+Exercise 2
+
+cities.reindex([5, 11, 9, 2])
+
+b.
+
+Pandas is easier to work with for relational databases, as it provides a DataFrame and Series as easy ways to manipulate data.
+
+c.
+
+It could be useful to reorder or shuffle a data frame when we are trying to look through the data according to a given features.

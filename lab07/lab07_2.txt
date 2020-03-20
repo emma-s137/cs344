@@ -1,0 +1,34 @@
+a. Categorical data would be data that you want treated as a string, while numerical data would be an integer or float
+ that you want to be treated as a number.
+
+b.
+train_model(
+    learning_rate=0.0001,
+    steps=100,
+    batch_size=5
+)
+Final RMSE (on training data): 167.79
+
+train_model(
+    learning_rate=0.00015,
+    steps=150,
+    batch_size=5
+)
+Final RMSE (on training data): 175.93
+
+c. The hyper-parameters are
+- the learning-curve acts as a the step that will be used for the search algorithm implemented for
+Machine Learning. Like we saw (especially with hill-climbing for the sin function) these step sizes
+can be adjusted to give better results, and not become stuck in local maximas.
+
+- the steps increases the overall amount of data that is put through the training algorithm, and will
+determine the size of all the periods
+    you would want to increase this number if the error has not converged
+
+- batch sizes cause an average of several trials for the training data to be used
+    ideally you want to start with a larger number and decrease this until you're results become more inconsisten
+
+There is no standard algorithm for "fine tuning" the parameters. However, some of the things above I mentioned
+are general rules of thumb. But it is important to remember the hyper parameters are data dependent, so each
+data set will behave differently.
+
