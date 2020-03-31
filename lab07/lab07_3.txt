@@ -1,2 +1,26 @@
+a.
+Q1
+
+california_housing_dataframe["rooms_per_person"] = california_housing_dataframe["total_rooms"]/california_housing_dataframe["population"]
+calibration_data = train_model(
+    learning_rate=0.05,
+    steps=500,
+    batch_size=5,
+    input_feature="rooms_per_person"
+)
+
+Q2
+plt.scatter(calibration_data["predictions"], calibration_data["targets"])
+
+Q3
+california_housing_dataframe["rooms_per_person"] = california_housing_dataframe["rooms_per_person"].apply(lambda x: min(x, 5))
+
 
 b.
+A synthetic feature gives you the ability to group and organize your data in a new way. This allows for the machine
+learning algorithm to be trained for these specific features. The examples seen here used the synthetic feature
+rooms_per_person.
+
+c.
+The outliers are the variables that are significantly different from the average of the data. They are
+typically clipped, as to not skew the calibration_data.

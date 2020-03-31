@@ -26,7 +26,7 @@ determine the size of all the periods
     you would want to increase this number if the error has not converged
 
 - batch sizes cause an average of several trials for the training data to be used
-    ideally you want to start with a larger number and decrease this until you're results become more inconsisten
+    ideally you want to start with a larger number and decrease this until you're results become more inconsistent.
 
 There is no standard algorithm for "fine tuning" the parameters. However, some of the things above I mentioned
 are general rules of thumb. But it is important to remember the hyper parameters are data dependent, so each
