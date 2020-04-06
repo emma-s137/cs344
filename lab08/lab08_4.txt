@@ -1,0 +1,7 @@
+1. In this instance, the K-fold validation was useful since the data set being worked with was not very big.
+
+2. Because this would make learning more difficult. The network will first have to adapt to these "wildly different ranges".
+
+3. He claims that this is to prevent over fitting, and I would agree that this is correct.
+
+4.

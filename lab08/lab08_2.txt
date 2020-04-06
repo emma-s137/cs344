@@ -1,0 +1,54 @@
+1. The pearson correlation coefficient is a value from -1 to 1. That indicates how good of a linear correlation the
+ data has, -1 would be a perfect negative linear correlation while 1 would be positive. A value of 0 means the
+ data has no linear correlation. One example in the table is all the variable compared to themselves have a value
+ of 1, which makes sense that you would see a perfectly linear correlation.
+
+ 2.
+ Task 1
+
+ minimal_features = [
+  "median_income",
+  "latitude",
+]
+
+minimal_training_examples = training_examples[minimal_features]
+minimal_validation_examples = validation_examples[minimal_features]
+
+_ = train_model(
+    learning_rate=0.01,
+    steps=500,
+    batch_size=5,
+    training_examples=minimal_training_examples,
+    training_targets=training_targets,
+    validation_examples=minimal_validation_examples,
+    validation_targets=validation_targets)
+
+
+Task 2
+I used the Google solution to make the latitudes into buckets.
+
+def select_and_transform_features(source_df):
+  LATITUDE_RANGES = zip(range(32, 44), range(33, 45))
+  selected_examples = pd.DataFrame()
+  selected_examples["median_income"] = source_df["median_income"]
+  for r in LATITUDE_RANGES:
+    selected_examples["latitude_%d_to_%d" % r] = source_df["latitude"].apply(
+      lambda l: 1.0 if l >= r[0] and l < r[1] else 0.0)
+  return selected_examples
+
+selected_training_examples = select_and_transform_features(training_examples)
+selected_validation_examples = select_and_transform_features(validation_examples)
+
+
+_ = train_model(
+    learning_rate=0.03,
+    steps=500,
+    batch_size=10,
+    training_examples=selected_training_examples,
+    training_targets=training_targets,
+    validation_examples=selected_validation_examples,
+    validation_targets=validation_targets)
+
+
+   Google RMSE: 140.3
+   My RMSE:     84.59
