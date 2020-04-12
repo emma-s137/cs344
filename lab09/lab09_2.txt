@@ -1,0 +1,9 @@
+1. Sparcity describes the non-accumulation of data at certain points leading to some white space in a
+graphical representation. This is optimal as it simplifies the model.
+
+2. L1 regularization works by looking for more simple patterns and associations to train a model, as a result
+   certain features will be completely overlooked causing a model to become more sparse, as it will learn
+   specific features it should recognize.
+
+3. With a learning rate of 0.1, a regularization strength of 0.8, steps of 300 and batch size of 100. I
+    observed log loss value of -- and a model size of --.

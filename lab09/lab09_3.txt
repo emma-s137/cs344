@@ -1,0 +1,10 @@
+1. I first tried changing the loss function from the binary cross_entropy to the mse loss function. I did not
+observe any significant changes with this architecture change.
+Nor did changing the amount of hidden layers. Or the number of units in those layers.
+There was a small change when using 'tanh' activation instead of 'relu'. But not significantly the accuracy goes down
+from 88% to 85%.
+
+So no none of these architectures do better then the ones that were selected. This can be explained by the fact that
+a change like adding more layers would not improve the accuracy of the model instead it would lead to overfitting.
+And the specific problem we are working with deals with binary classification which is why the binary cross_entropy
+loss function was selected.

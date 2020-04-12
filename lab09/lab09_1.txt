@@ -1,0 +1,16 @@
+1. The linear regression model approach is not very effective, as L2 Loss is used which does not do very well
+with penalizing misclassifications when the output is interpreted as a probability.
+
+2. LogLoss correctly penalizes based on "confidence errors". While, L2 Loss does not differentiate strongly between
+misclassifying an example with a 0.9 vs 0.9999 probability.
+
+3. Logistic regression is more effective then linear regression as the logloss with logistic regression is a lot
+more consistent then the RMSE values seen with linear regression.
+
+4. The AUC on the validation set was 0.81 and the Accuracy on the validation set is 0.78.
+    And the hyper parameters used are learning_rate of 0.000005,
+    steps of size 10000, and batch_size of 500.
+
+
+
+
