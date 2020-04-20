@@ -1,0 +1,4 @@
+a. The cat and dog dataset contains 2,000 pictures that are 150X150 pixels.
+b. Both of them rely on relu activation, and the data is flattened before use.
+c. The images seem to become more and more abstract, but the paws of the cats seem to stay as a pattern even at
+the conv2d_2 step.

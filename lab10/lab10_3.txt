@@ -1,0 +1,15 @@
+1. In this case, the confusion matrix would show which numbers were misclassified, as a different number.
+The most common mistakes are 8's being classified as 2 or 5's and 9's and 9's and 4's.
+
+2. Keras has a neural network framework while, tensor flow is an open source library for various machine learning tasks.
+
+classifier = train_nn_classification_model(
+    learning_rate=0.05,
+    steps=1000,
+    batch_size=30,
+    hidden_units=[100, 100],
+
+Final accuracy (on validation data): 0.95
+Accuracy on test data: 0.95
+
+3. For 10 steps the visualization is a lot more grainy then for 1000.

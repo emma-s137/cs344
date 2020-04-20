@@ -1,0 +1,18 @@
+1. I prefer keras because it is more intuitive and easy for new users to figure out.
+In contrast, tensorFlow provides more potential functionality, but you need to know how to use it.
+
+2.
+dnn_regressor = train_nn_regression_model(
+    learning_rate=0.001,
+    steps=2000,
+    batch_size=100,
+    hidden_units=[10, 10],
+    training_examples=training_examples,
+    training_targets=training_targets,
+    validation_examples=validation_examples,
+    validation_targets=validation_targets)
+
+
+Final RMSE (on training data):   103.56
+Final RMSE (on validation data): 103.04
+Final RMSE (on test data): 101.32

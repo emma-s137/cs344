@@ -1,0 +1,44 @@
+1. AdaGrad adjusts the learning rate of the model for differing coefficients. This works
+wel for convex problems.
+
+2.
+
+task 1)
+    my_optimizer=tf.train.GradientDescentOptimizer(learning_rate=0.005),
+    steps=2000,
+    batch_size=50,
+    hidden_units=[10, 10],
+
+Final RMSE (on training data):   70.83
+Final RMSE (on validation data): 69.60
+
+task 2)
+_, adagrad_training_losses, adagrad_validation_losses = train_nn_regression_model(
+    my_optimizer=tf.train.AdagradOptimizer(learning_rate=0.5),
+    steps=500,
+    batch_size=100,
+    hidden_units=[10, 10],
+Final RMSE (on training data):   69.71
+Final RMSE (on validation data): 68.25
+
+_, adam_training_losses, adam_validation_losses = train_nn_regression_model(
+    my_optimizer=tf.train.AdamOptimizer(learning_rate=0.009),
+    steps=500,
+    batch_size=100,
+    hidden_units=[10, 10],
+
+Final RMSE (on training data):   71.15
+Final RMSE (on validation data): 69.66
+
+task 3)
+_ = train_nn_regression_model(
+    my_optimizer=tf.train.AdagradOptimizer(learning_rate=0.15),
+    steps=1000,
+    batch_size=50,
+    hidden_units=[10, 10],
+
+Final RMSE (on training data):   68.95
+Final RMSE (on validation data): 68.02
+
+3. Skip
+
