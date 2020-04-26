@@ -1,16 +1,21 @@
-1. A linear model could be preferable for simple problems that won't exhibit any non-linear behavior.
-These models are also faster to train then neural networks.
+a. There seems to not be any missing features. But some data skew can be expected as the ratio of men to
+women seems to be 2/3 men. In addition, 92% of capital_gain and 95% of capital_loss is reported as 0. This
+may suggest an error at some point in the data collection or data editing process.
 
-2. Overall, the neural net 'seems' to perform better then the linear model. The linear model has values
-of 0.78 for the accuracy of both the training and testing data. While the neural net has accuracy values
-of 0.92 for the training set and 0.8 for the testing set. However, the difference of 0.02 between the two
-testing sets is not that significant. However, the 0.12 between the testing and training sets for the neural net
-suggest that we are seeing over fitting.
+b. I binned marital status with the gender being the color by feature. You can see the effects of the bias clearly
+because it looks as though the amount of men married is much higher then women. However, this is the result of an unequal
+amount of collected data for men vs women.
 
-3. Overall, the embedding didn't seem to have much of an effect. The accuracy for the training and testing sets
-remained 0.78
+c. done
 
-4. The words "enjoyed" and "loved" are very close to each other, and they both have very positive meanings.
+d.
+                    Precision   Recall
+White               0.69        0.59
+Black               0.64        0.5
+Asian-Pac-Islander  0.72        0.64
+Amer-Indian-Eskimo  0.58        0.52
+Other               0.8         0.33
 
-5. The best hyperparameters were found using all of terms in the vocab file, using [25,25] hidden units and training
-the model with 5,000 steps. The resulting accuracies were 0.92 for the training set and 0.86 for the testing set.
+Our model seems to be skewed towards the other subgroup, but not as ideal for Amer-Indian-Eskimo group.
+
+
