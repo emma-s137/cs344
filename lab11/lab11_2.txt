@@ -1,0 +1,16 @@
+1. A linear model could be preferable for simple problems that won't exhibit any non-linear behavior.
+These models are also faster to train then neural networks.
+
+2. Overall, the neural net 'seems' to perform better then the linear model. The linear model has values
+of 0.78 for the accuracy of both the training and testing data. While the neural net has accuracy values
+of 0.92 for the training set and 0.8 for the testing set. However, the difference of 0.02 between the two
+testing sets is not that significant. However, the 0.12 between the testing and training sets for the neural net
+suggest that we are seeing over fitting.
+
+3. Overall, the embedding didn't seem to have much of an effect. The accuracy for the training and testing sets
+remained 0.78
+
+4. The words "enjoyed" and "loved" are very close to each other, and they both have very positive meanings.
+
+5. The best hyperparameters were found using all of terms in the vocab file, using [25,25] hidden units and training
+the model with 5,000 steps. The resulting accuracies were 0.92 for the training set and 0.86 for the testing set.
