@@ -1,0 +1,10 @@
+I want to use a V2 Plant Seedlings Dataset from lionbridge which contains images of 12 different crops during their
+growth cycle. I plan on using tensorflow and keras to build a convolutional neural network. The model
+would be able to use a softmax to classify the plants in the images.
+The dataset contains 5,539 images. Here is a link to the dataset: https://www.kaggle.com/vbookshelf/v2-plant-seedlings-dataset
+
+I thought this sounded very interesting because I was discussing agricultural practices in my biology class, and how it would
+be difficult to move over from monoculture to more sustainable agroecology because of increased labor demands. However,
+if you could use machine learning to allow a plant to be recognized using image recognition you could develop drones to
+give attention to individual plants within a system that contains a multitude of crops.
+
