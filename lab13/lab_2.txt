@@ -1,0 +1,19 @@
+isOn(A,B)
+isOn(B,C)
+supports(table, C)
+E x, y supports(x,y) -> isOn(y,x)
+E x, y isOn(x,y) -> above(x, y)
+E x, y, z above(x, y) , above(y,z) -> above(x,z)
+
+above(A,table)
+
+if support(table, C) then isOn(C, table)
+if isOn(C, table) then above(C, table)
+
+if isOn(B,C) then above(B,C)
+if isOn(A,B) then above(A,B)
+
+if above(A,B) and above(B,C) then above(A,C)
+if above(A,C) anf above(C, table) then above(A,table)
+
+
